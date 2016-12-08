@@ -7,6 +7,13 @@ typedef struct singly
 	struct singly *pnext;
 }Node, *pNode;
 
+typedef struct stack
+{
+		int data;
+		struct singly *TOP;
+		struct singly *BOT;
+}Stack,*pStack;
+
 
 void Init_stack(pStack ps)
 {
@@ -75,7 +82,7 @@ void Print_stack(pStack ps)
 
 	while (pnew != ps -> BOT)
 	{
-		printf("%d",pnew->node);
+		printf("%d\n",pnew->node);
 		pnew = pnew->pnext;
 	}
 	return;
@@ -131,7 +138,7 @@ void main(void)
 				for(i=0;i<d;i++)
 				{
 					r  = Pop_stack(&s);
-					printf("%d",r);
+					printf("%d\n",r);
 				}
 				break;	
 			case 3:
